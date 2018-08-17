@@ -145,6 +145,11 @@ def mapdata(request):
 
     return JsonResponse(list(data) , safe=False) 
 
+def priority_api(request):
+    data = Request.objects.values()
+
+    return JsonResponse(list(data) , safe=False) 
+
 def mapview(request):
     return render(request,"map.html")
 
